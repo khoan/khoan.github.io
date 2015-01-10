@@ -6,7 +6,7 @@ tags:
 
 Run this on ruby 1.9
 
-```ruby
+~~~ ruby
 require 'delegate'
 
 class Bam < SimpleDelegator
@@ -35,11 +35,11 @@ defined? Bam
 # => "constant"
 defined? Rails
 # => "constant"
-```
+~~~
 
 Something is up inside SimpleDelegator...
 
-```ruby
+~~~ ruby
 class Normal
   def bam
     defined? Normal
@@ -48,7 +48,7 @@ end
 
 Normal.new.bam
 # => "constant"
-```
+~~~
 
 > Mon_Ouie: Module#const_defined?
 >
@@ -56,7 +56,7 @@ Normal.new.bam
 
 Thanks Mon_Ouie on IRC#ruby-lang. Ok, let's try that again...
 
-```ruby
+~~~ ruby
 class Bam < SimpleDelegator
   def bam
     defined? ::Bam
@@ -74,7 +74,7 @@ bam.bam
 
 bam.rails
 # => true
-```
+~~~
 
 hectic, turns out BasicObject is outside of the namespace of the standard library
 see http://www.ruby-doc.org/core-1.9.3/BasicObject.html

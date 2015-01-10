@@ -1,24 +1,29 @@
 ---
 title: ruby fun
 date: 2014-08-20 00:00 UTC
-tags:
 ---
 
 ok, let's get straight into irb because REPL speaks a thousand words...
-```ruby
+
+~~~ ruby
 irb> %w_a b c_
 => ['a', 'b', 'c']
-```
+~~~
+
 That was cryptic...try this
-```ruby
+
+~~~ ruby
 irb> %i_a b c_
 => [:a, :b, :c]
-```
+~~~
+
 That save a whole bunch of keystrokes...how about this
-```ruby
+
+~~~ ruby
 irb> %r_a/b/c_
 => /a\/b\/c/
-```
+~~~
+
 That makes regular expression with forward slash more readable...in fact there's a whole slew of them %: %q, %x, %
 
 ok, that's enough fun for now.

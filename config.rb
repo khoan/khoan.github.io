@@ -30,6 +30,7 @@ activate :blog do |blog|
 end
 
 activate :directory_indexes
+activate :syntax, line_numbers: true
 
 page "/feed.xml", layout: false
 

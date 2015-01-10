@@ -6,7 +6,7 @@ date: 2012-07-19 00:00 UTC
 
 At Shop2 we do the Rails 3.2, Mongoid 2.4, and Devise 2.0. We found that Devise by default does not play nice with default scoping.
 
-```ruby
+~~~ ruby
 # Our User model with default_scope of active users,
 # and a :vip scope
 #
@@ -20,14 +20,14 @@ class User
 
   scope :vip, where(status: 'vip')
 end
-```
+~~~
 
 So how would we authenticate VIPs?
 
 Devise uses Warden::Strategies to authenticate, and loads back user from a session. This is how I plugged into Devise:
 
 
-```ruby
+~~~ ruby
 # lib/vip_authenticatable.rb
 #
 # We introduce :vip_authenticatable strategy to Warden.
@@ -75,6 +75,6 @@ Devise.setup do |config|
     end
   end
 end
-```
+~~~
 
 And there you have it folks: VIP login.
