@@ -1,3 +1,5 @@
+activate :directory_indexes
+
 ###
 # Blog settings
 ###
