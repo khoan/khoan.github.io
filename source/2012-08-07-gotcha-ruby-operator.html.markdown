@@ -1,5 +1,5 @@
 ---
-title: gotcha: ruby += operator
+title: "gotcha: ruby += operator"
 date: 2012-08-07 00:00 UTC
 ---
 
