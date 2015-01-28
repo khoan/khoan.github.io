@@ -112,8 +112,9 @@ end
 # Deploy
 ###
 
-#activate :deploy do |deploy|
-#  deploy.method = :git
-#  deploy.branch = 'master'
-#  deploy.build_before = true
-#end
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.branch = 'master'
+  deploy.build_before = true
+  deploy.commit_message = 'Site updated to ' << `git log --pretty="%h" -n1`
+end
