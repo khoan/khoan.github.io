@@ -1,3 +1,5 @@
+<% summary ||= false %>
+
 <article class="o-article">
   <div class="o-post-date--square">
     <div class="o-post-date--square__day">
@@ -11,8 +13,8 @@
     </div>
   </div>
 
-  <h2><%= link_to article.title, article, class: 'o-article__link', target: '_blank' %></h2>
-  <% if defined? summary %>
+  <h2><%= link_to article.title, article, class: 'o-article__link' %></h2>
+  <% if summary %>
     <%= article.summary(250) %>
     <%= link_to 'read more...', article %>
   <% else %>
