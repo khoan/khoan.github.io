@@ -1,0 +1,21 @@
+<article class="o-article">
+  <div class="o-post-date--square">
+    <div class="o-post-date--square__day">
+      <%= article.date.strftime('%e') %>
+    </div>
+    <div class="o-post-date--square__month">
+      <%= article.date.strftime('%b') %>
+    </div>
+    <div class="o-post-date--square__year">
+      <%= article.date.strftime('%Y') %>
+    </div>
+  </div>
+
+  <h2><%= link_to article.title, article, class: 'o-article__link', target: '_blank' %></h2>
+  <% if defined? summary %>
+    <%= article.summary(250) %>
+    <%= link_to 'read more...', article %>
+  <% else %>
+    <%= article.body %>
+  <% end %>
+</article>

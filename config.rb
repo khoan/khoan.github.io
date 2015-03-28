@@ -8,9 +8,8 @@ activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = "blog"
 
+  blog.sources = "content/{year}-{month}-{day}-{title}.html"
   # blog.permalink = "{year}/{month}/{day}/{title}.html"
-  # Matcher for blog source files
-  # blog.sources = "{year}-{month}-{day}-{title}.html"
   # blog.taglink = "tags/{tag}.html"
   # blog.layout = "layout"
   # blog.summary_separator = /(READMORE)/
@@ -46,6 +45,9 @@ page "/feed.xml", layout: false
 ###
 # Page options, layouts, aliases and proxies
 ###
+
+page '/index.html', :layout => 'layouts/basic'
+page '/content/*', :layout => 'layouts/article'
 
 # Per-page layout changes:
 #
@@ -102,7 +104,9 @@ configure :build do
   # activate :asset_hash
 
   # Use relative URLs
-  # activate :relative_assets
+  activate :relative_assets
+  set :relative_links, true
+  set :relative_paths, true
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"

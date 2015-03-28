@@ -3,34 +3,8 @@ body_class: c-index
 pageable: true
 ---
 
-<header class="c-masthead">
-  <figure>
-    <img class="c-masthead__avatar" src="http://s.gravatar.com/avatar/6e0ed765699d27f1302adff76bc18b0e?s=80" alt="avatar">
-
-    <figcaption>
-      <h1 class="c-masthead__title">An hero</h1>
-      <span class="c-masthead__subtitle">coder by day, an hero by night</span>
-    </figcaption>
-  </figure>
-</header>
-
 <% page_articles.each_with_index do |article, i| %>
-  <article>
-    <div class="o-post-date--square">
-      <div class="o-post-date--square__day">
-        <%= article.date.strftime('%e') %>
-      </div>
-      <div class="o-post-date--square__month">
-        <%= article.date.strftime('%b') %>
-      </div>
-      <div class="o-post-date--square__year">
-        <%= article.date.strftime('%Y') %>
-      </div>
-    </div>
-
-    <h2><%= link_to article.title, article %></h2>
-    <%= article.summary 250 %>
-  </article>
+  <%= partial 'partials/article', locals: {:article => article, :summary => true} %> 
 <% end %>
 
 <% if paginate %>
