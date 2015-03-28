@@ -34,6 +34,12 @@
 article {
   position: relative; }
 
+.c-index article::before,
+.c-index article::after {
+  display: block;
+  content: '';
+  margin: 4rem 0; }
+
 .c-index .o-post-date--square {
   position: absolute;
   text-align: right;
