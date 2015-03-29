@@ -4,7 +4,7 @@ pageable: true
 ---
 
 <% page_articles.each_with_index do |article, i| %>
-  <%= partial 'partials/article', locals: {:article => article, :summary => true} %> 
+  <%= partial 'article', locals: {:article => article, :summary => true} %> 
 <% end %>
 
 <% if paginate %>

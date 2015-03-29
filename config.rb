@@ -46,8 +46,8 @@ page "/feed.xml", layout: false
 # Page options, layouts, aliases and proxies
 ###
 
-page '/index.html', :layout => 'layouts/basic'
-page '/content/*', :layout => 'layouts/article'
+page '/index.html', :layout => 'basic'
+page '/content/*', :layout => 'article'
 
 # Per-page layout changes:
 #
@@ -83,10 +83,9 @@ page '/content/*', :layout => 'layouts/article'
 #   end
 # end
 
+set :partials_dir, 'partials'
 set :css_dir, 'stylesheets'
-
 set :js_dir, 'javascripts'
-
 set :images_dir, 'images'
 
 ###
