@@ -138,3 +138,6 @@ DEPENDENCIES
   middleman-deploy
   middleman-syntax
   nokogiri
+
+BUNDLED WITH
+   1.10.3
