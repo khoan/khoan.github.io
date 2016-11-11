@@ -70,7 +70,7 @@ stdlib probably has some buffering, screw that, let's talk FTP and download stre
       local.binmode
 
       ftp.synchronize do
-        # Holy Server, give me only binary, and only binary
+        # Holy Server, give me only binary, and binary only
         ftp.voidcmd("TYPE I")
 
         # Show me where to get it
