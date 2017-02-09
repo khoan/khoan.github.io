@@ -1,3 +1,12 @@
+/**
+ * class convention:
+ *   http://bdavidxyz.com/blog/how-to-name-css-classes/
+ *   https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/
+ *   c-*  components
+ *   o-*  reusable objects
+ *   u-*  utility
+ */
+
 [role=main] {
   width: 90vw;
   margin: 0 auto; }
@@ -55,6 +64,12 @@
   content: '';
   margin: 4rem 0; }
 
+.o-annotation {
+  position: absolute;
+  width: 100%;
+  left: -103%;
+  text-align: right; }
+
 .o-post-date--square:hover .o-post-date--square__day,
 .o-post-date--square:hover .o-post-date--square__month,
 .o-post-date--square:hover .o-post-date--square__year {
@@ -94,3 +109,4 @@
     font-size: 0.6rem;
             transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg); } }
+
