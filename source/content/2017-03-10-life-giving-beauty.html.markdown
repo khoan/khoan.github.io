@@ -15,6 +15,6 @@ Often resolutions to hard problems appears out of no where - the eureka-why-didn
 
 Contrary to the fantasy of Charles Xavier, you are the sole master of your thoughts bar none. All shackles are not imposed but rather wilfully chained on by you, for one reason or another. Such mental blockers are exhibited as tiredness, laziness in solving hard problems, procrastination to even begin the work, a lack of enthusiasm because there's nothing to look forward to. Such is the Ugliness that pervades.
 
-We live in a world where anything can be imagined and built by courtesy of the aforementioned civilization builders. So if you decide to partake in the discoveries of life giving Beauty, the world is your oyster. But beware this game of life is highly addictive. So friends go forth wallow in hard problems to re-born again a better human.
+We live in a world where anything can be imagined and built by courtesy of the aforementioned civilization builders. If you decide to partake in the discoveries of life giving Beauty, the world is your oyster. But beware this game of life is highly addictive. So friends go forth, wallow in hard problems to re-born again a better human.
 
 Be creative!
