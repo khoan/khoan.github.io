@@ -5,7 +5,7 @@ date: 2017-03-10 01:06 UTC
 
 Life is a struggle between life giving Beauty and Ugliness.
 
-When one's soul is deprived of beauty, life is miserable. Only through deep thought on hard problems towards complete resolution can Beauty be perceived. Thence, a tremendous outburst of joy, and a fevor to share immediately that very insight to those around is the powerful effect of Beauty.
+When one's soul is deprived of Beauty, life is miserable. Only through deep thought on hard problems towards complete resolution can Beauty be perceived. Thence, a tremendous outburst of joy, and a fevor to share immediately that very insight to those around is the powerful effect of Beauty.
 
 The zealots of Ugliness - Aristotle the botanist, Paolo Sarpi, Galileo Galilei, Newton the alchemist, Thomas Hobbes, Jeremy Bentham, Adam Smith, Thomas Malthus, Bertrand Russell, H.G. Wells, Milton Friedman - have never made that kind of mental breakthrough are miserable, and so indulge on other kinds of pleasure as an expression of that abyss of misery, for they value little their wretched existence beyond mortal life.
 
