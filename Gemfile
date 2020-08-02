@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'json', github: 'flori/json', branch: 'v1.8'
+
 gem 'builder', '~> 3.0'
 gem 'middleman', '~> 3.3.7'
 gem 'middleman-blog', '~> 3.5.3'
