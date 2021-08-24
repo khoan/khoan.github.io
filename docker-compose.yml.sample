@@ -10,6 +10,7 @@ x-app: &app
   image: blog-dev:1.0.0
   volumes:
     - .:/app:cached
+    - ~/.ssh:/root/.ssh:ro
     - bundle:/usr/local/bundle
   environment:
     EDITOR: vi
