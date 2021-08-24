@@ -1,11 +1,16 @@
 source 'https://rubygems.org'
 
-gem 'json', github: 'flori/json', branch: 'v1.8'
-
-gem 'builder', '~> 3.0'
-gem 'middleman', '~> 3.3.7'
-gem 'middleman-blog', '~> 3.5.3'
-gem 'middleman-deploy'
-#gem 'middleman-gh-pages', github: 'cyril-sf/middleman-gh-pages', branch: 'gh-user-page'
+gem 'middleman'
+gem 'middleman-blog'
 gem 'middleman-syntax'
+gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
+gem 'builder'
+gem 'duktape'
 gem 'nokogiri'
+
+#gem 'json'
+#gem 'middleman', '~> 3.3.7'
+#gem 'middleman-blog', '~> 3.5.3'
+#gem 'middleman-deploy'
+#gem 'middleman-syntax'
+#gem 'webrick'

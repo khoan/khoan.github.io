@@ -83,7 +83,6 @@ page '/content/*', :layout => 'article'
 #   end
 # end
 
-set :partials_dir, 'partials'
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
@@ -116,7 +115,7 @@ end
 ###
 
 activate :deploy do |deploy|
-  deploy.method = :git
+  deploy.deploy_method = :git
   deploy.branch = 'master'
   deploy.build_before = true
   deploy.commit_message = 'Site updated to ' << `git log --pretty="%h" -n1`
