@@ -1,0 +1,31 @@
+version: '3.8'
+
+x-app: &app
+  build:
+    context: .dockerdev
+    dockerfile: Dockerfile
+    args:
+      RUBY_VERSION: '3.0.2'
+      BUNDLER_VERSION: '2.2.22'
+  image: blog-dev:1.0.0
+  volumes:
+    - .:/app:cached
+    - bundle:/usr/local/bundle
+  environment:
+    EDITOR: vi
+  tmpfs:
+    - /tmp
+
+services:
+  runner:
+    <<: *app
+    command: /bin/bash
+
+  middleman:
+    <<: *app
+    command: bundle exec middleman server --bind-address 0.0.0.0
+    ports:
+      - '4567:4567'
+
+volumes:
+  bundle:
