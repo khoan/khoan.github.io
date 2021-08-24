@@ -13,9 +13,8 @@ $ docker-compose run --rm runner
 $ docker-compose up middleman
 # open http://lvh.me:4567
 
+# git config user.email "an@hero.com"
+# git config user.name "An Hero"
+# vim ~/.ssh/id_rsa
 # middleman deploy
 ```
-
-## TODO
-
-- [] FIX git deploy

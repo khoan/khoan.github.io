@@ -10,6 +10,7 @@ RUN apt-get update -qq \
     gnupg2 \
     curl \
     git \
+    ssh \
   && apt-get clean \
   && rm -rf /var/cache/apt/archives/* \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
