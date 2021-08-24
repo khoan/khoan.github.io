@@ -1,0 +1,306 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <title>An Hero</title>
+
+    <link href="stylesheets/normalize.css" rel="stylesheet" /><link href="stylesheets/syntax.css" rel="stylesheet" /><link href="stylesheets/layout.css" rel="stylesheet" />
+
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+  </head>
+  <body class="c-index">
+    <div id="main" role="main">
+      <header class="c-masthead">
+<a href="/">    <figure>
+      <img class="c-masthead__avatar" src="http://s.gravatar.com/avatar/6e0ed765699d27f1302adff76bc18b0e?s=80" alt="avatar">
+
+      <figcaption>
+        <h1 class="c-masthead__title">An hero</h1>
+        <span class="c-masthead__subtitle">coder by day, an hero by night</span>
+      </figcaption>
+    </figure>
+</a></header>
+ 
+
+        
+<article class="o-article">
+  <div class="o-post-date--square">
+    <div class="o-post-date--square__day">
+      24
+    </div>
+    <div class="o-post-date--square__month">
+      Aug
+    </div>
+    <div class="o-post-date--square__year">
+      2021
+    </div>
+  </div>
+
+  <h2><a href="2021/08/24/lyndon-larouche-greatest-economist-change-my-mind/" class="o-article__link">Lyndon H. LaRouche is the greatest economist of the 20th & 21st Century</a></h2>
+    <p>Change my mind: Lyndon H. LaRouche Jr. is the greatest economist of the 20th &amp; 21st Century.</p>
+
+<p>Lyndon LaRouche is vilified, because of his actions on a powerful idea of organizing our economic activities, as a species, around Sovereign Nation States...</p>
+    <a href="2021/08/24/lyndon-larouche-greatest-economist-change-my-mind/">read more...</a>
+</article>
+
+  
+<article class="o-article">
+  <div class="o-post-date--square">
+    <div class="o-post-date--square__day">
+       2
+    </div>
+    <div class="o-post-date--square__month">
+      Aug
+    </div>
+    <div class="o-post-date--square__year">
+      2020
+    </div>
+  </div>
+
+  <h2><a href="2020/08/02/the-mindset-of-a-coder-and-his-three-plateau/" class="o-article__link">The mindset of a coder and his three plateaus</a></h2>
+    <h3 id="tldr">tl;dr</h3>
+
+<p>I think, we should write code that is grokable by most people.</p>
+
+<h3 id="gory-details">gory details</h3>
+
+<h4 id="the-first-plateau---the-infant-mindset">The first plateau - the infant mindset</h4>
+
+<p>Starting out, as a coder, every small win propels us to explore what possibilities lie ahead. Admittedly, our code is a hot...</p>
+    <a href="2020/08/02/the-mindset-of-a-coder-and-his-three-plateau/">read more...</a>
+</article>
+
+  
+<article class="o-article">
+  <div class="o-post-date--square">
+    <div class="o-post-date--square__day">
+      26
+    </div>
+    <div class="o-post-date--square__month">
+      Aug
+    </div>
+    <div class="o-post-date--square__year">
+      2017
+    </div>
+  </div>
+
+  <h2><a href="2017/08/26/modest-proposal-to-avert-crisis/" class="o-article__link">A Modest proposal to avert crisis</a></h2>
+    <p>It's that time again to exercise your Citizenship rights. Here's my submission to <a href="http://www.treasury.gov.au/ConsultationsandReviews/Consultations/2017/Crisis-Management-Bill">APRA'S CRISIS MANAGEMENT POWERS</a>.</p>
+
+<div class="highlight"><pre class="highlight html"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td>
+<td class="rouge-code"><pre>Senior Adviser
+Banking, Insurance and Capital Markets Unit
+Financial System Division
+The Treasury...</pre></td>
+</tr></tbody></table></code></pre></div>
+    <a href="2017/08/26/modest-proposal-to-avert-crisis/">read more...</a>
+</article>
+
+  
+<article class="o-article">
+  <div class="o-post-date--square">
+    <div class="o-post-date--square__day">
+      16
+    </div>
+    <div class="o-post-date--square__month">
+      Jun
+    </div>
+    <div class="o-post-date--square__year">
+      2017
+    </div>
+  </div>
+
+  <h2><a href="2017/06/16/ruby-super-chase/" class="o-article__link">Chasing after super in your favorite Ruby lib</a></h2>
+    <p>Let's explore Rails 4.1 action view abit, in particular stylesheet_link_tag helper:</p>
+
+<div class="highlight"><pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td>
+<td class="rouge-code"><pre><span class="n">irb</span><span class="o">&gt;</span> <span class="n">av</span> <span class="o">=</span> <span class="no">ActionView</span><span class="o">::</span><span class="no">Base</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="kp">nil</span><span class="p">,</span> <span class="p">{},</span> <span class="kp">nil</span><span class="p">)</span>
+<span class="n">irb</span><span class="o">&gt;</span> <span class="n">av</span><span class="p">.</span><span class="nf">method</span><span class="p">(</span><span class="ss">:stylesheet_link_tag</span><span class="p">).</span><span class="nf">owner</span>
+<span class="c1"># =&gt; Sprockets::Rails::Helper</span>
+<span class="n">irb</span><span class="o">&gt;</span> <span class="n">av</span><span class="p">.</span><span class="nf">method</span><span class="p">(</span><span class="ss">:stylesheet_link_tag</span></pre></td>
+</tr></tbody></table></code></pre></div>
+    <a href="2017/06/16/ruby-super-chase/">read more...</a>
+</article>
+
+  
+<article class="o-article">
+  <div class="o-post-date--square">
+    <div class="o-post-date--square__day">
+      10
+    </div>
+    <div class="o-post-date--square__month">
+      Mar
+    </div>
+    <div class="o-post-date--square__year">
+      2017
+    </div>
+  </div>
+
+  <h2><a href="2017/03/10/life-giving-beauty/" class="o-article__link">Life giving Beauty</a></h2>
+    <p>Civilization is one fierce struggle between life giving Beauty and Ugliness.</p>
+
+<p>When one's soul is deprived of Beauty, life is miserable. Only through deep thought on hard problems towards complete resolution can Beauty be perceived. Thence, an intense...</p>
+    <a href="2017/03/10/life-giving-beauty/">read more...</a>
+</article>
+
+  
+<article class="o-article">
+  <div class="o-post-date--square">
+    <div class="o-post-date--square__day">
+       7
+    </div>
+    <div class="o-post-date--square__month">
+      Feb
+    </div>
+    <div class="o-post-date--square__year">
+      2017
+    </div>
+  </div>
+
+  <h2><a href="2017/02/07/hamilton-report-on-public-credit/" class="o-article__link">Report Relative to a Provision for the Support of Public Credit</a></h2>
+    <p>source: <a href="https://founders.archives.gov/ancestor/ARHN-01-06-02-0076">founders archives</a></p>
+
+<p>Treasury Department, January 9, 1790. [Communicated on January 14, 1790]</p>
+
+<p>[To the Speaker of the House of Representatives]</p>
+
+<p><span class="o-annotation"><em>Preamble</em></span></p>
+
+<p>The Secretary of the Treasury, in obedience to the resolution of the House of Representatives...</p>
+    <a href="2017/02/07/hamilton-report-on-public-credit/">read more...</a>
+</article>
+
+  
+<article class="o-article">
+  <div class="o-post-date--square">
+    <div class="o-post-date--square__day">
+       7
+    </div>
+    <div class="o-post-date--square__month">
+      Feb
+    </div>
+    <div class="o-post-date--square__year">
+      2017
+    </div>
+  </div>
+
+  <h2><a href="2017/02/07/hamilton-report-on-national-bank/" class="o-article__link">Report on the Establishment of a Mint</a></h2>
+    <p>source: <a href="https://founders.archives.gov/ancestor/ARHN-01-07-02-0334">founders archives</a></p>
+
+<p>source: https://founders.archives.gov/ancestor/ARHN-01-08-02-0060</p>
+
+    <a href="2017/02/07/hamilton-report-on-national-bank/">read more...</a>
+</article>
+
+  
+<article class="o-article">
+  <div class="o-post-date--square">
+    <div class="o-post-date--square__day">
+       7
+    </div>
+    <div class="o-post-date--square__month">
+      Feb
+    </div>
+    <div class="o-post-date--square__year">
+      2017
+    </div>
+  </div>
+
+  <h2><a href="2017/02/07/hamilton-report-on-manufactures/" class="o-article__link">Report on the Subject of Manufactures</a></h2>
+    <p>source: https://founders.archives.gov/ancestor/ARHN-01-10-02-0001</p>
+
+    <a href="2017/02/07/hamilton-report-on-manufactures/">read more...</a>
+</article>
+
+  
+<article class="o-article">
+  <div class="o-post-date--square">
+    <div class="o-post-date--square__day">
+      11
+    </div>
+    <div class="o-post-date--square__month">
+      Nov
+    </div>
+    <div class="o-post-date--square__year">
+      2016
+    </div>
+  </div>
+
+  <h2><a href="2016/11/11/ruby-ftp-stream/" class="o-article__link">Ruby FTP stream</a></h2>
+    <p>Good ol' FTP that's how the web's done once. Naturally Ruby has an FTP stdlib. But if I download 15MB then my Ruby process memory increased by 15MB and NEVER come back down. Poof, my 15MB went into the ether. And if you have a long running process...</p>
+    <a href="2016/11/11/ruby-ftp-stream/">read more...</a>
+</article>
+
+  
+<article class="o-article">
+  <div class="o-post-date--square">
+    <div class="o-post-date--square__day">
+      24
+    </div>
+    <div class="o-post-date--square__month">
+      Aug
+    </div>
+    <div class="o-post-date--square__year">
+      2016
+    </div>
+  </div>
+
+  <h2><a href="2016/08/24/tembed-a-ruby-c-extension/" class="o-article__link">Meet Tembed a Ruby C extension</a></h2>
+    <p>Alright, so you're testing fancy fonts in the lovely browsers, then bam IE keeps spewing <em>installable embedding not allowed</em> and fonts are broken. But the Google God points to <a href="https://www.andrebacklund.com/fontfixer.html">Andre Backlund fontfixer</a>.</p>
+
+<p>Hallelujah! One font fixed, only a few more to...</p>
+    <a href="2016/08/24/tembed-a-ruby-c-extension/">read more...</a>
+</article>
+
+
+<hr style="margin-top: 60px">
+
+<div style="margin-bottom: 100px">
+    <p>Page 1 of 3</p>
+
+
+      <span><a href="page/2/">Next →</a></span>
+</div>
+
+    </div>
+
+    <script>
+window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+</script>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46083412-3', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,112 @@
+/**
+ * class convention:
+ *   http://bdavidxyz.com/blog/how-to-name-css-classes/
+ *   https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/
+ *   c-*  components
+ *   o-*  reusable objects
+ *   u-*  utility
+ */
+
+[role=main] {
+  width: 90vw;
+  margin: 0 auto; }
+
+@media (min-width: 700px) {
+  [role=main] {
+    width: 60vw; } }
+
+.c-masthead {
+  position: relative;
+  text-align: center; }
+
+.c-masthead::before,
+.c-masthead::after {
+  display: block;
+  content: ''; }
+
+.c-masthead::before {
+  margin: 3em; }
+
+.c-masthead::after {
+  margin: 5em; }
+
+.c-masthead__avatar {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 50%;
+  background: #eee;
+  padding: 2px; }
+
+.c-masthead figcaption {
+  display: inline-block;
+  position: relative;
+  top: -1em;
+  margin-left: 1em; }
+
+.c-masthead a {
+  color: black; }
+
+.o-article {
+  position: relative; }
+
+.o-article__link {
+  color: black;
+  text-decoration: none; }
+
+@media (max-width: 700px) {
+  .o-article h2 {
+    margin-top: 0; } }
+
+.c-index .o-article::before,
+.c-index .o-article::after {
+  display: block;
+  content: '';
+  margin: 4rem 0; }
+
+.o-annotation {
+  position: absolute;
+  width: 100%;
+  left: -103%;
+  text-align: right; }
+
+.o-post-date--square:hover .o-post-date--square__day,
+.o-post-date--square:hover .o-post-date--square__month,
+.o-post-date--square:hover .o-post-date--square__year {
+  color: black; }
+
+.o-post-date--square__day,
+.o-post-date--square__month,
+.o-post-date--square__year {
+  color: #bbb;
+  display: inline-block;
+  font-size: 0.8rem; }
+
+@media (min-width: 700px) {
+  .o-post-date--square {
+    position: absolute;
+    text-align: right;
+    left: -4.2em; }
+
+  .o-post-date--square__day,
+  .o-post-date--square__month,
+  .o-post-date--square__year {
+    display: block;
+    color: black; }
+
+  .o-post-date--square {
+    border: 1px solid black;
+    padding: 5px;
+    padding-right: 1.1em; }
+
+  .o-post-date--square__day {
+    font-size: 1.5rem; }
+
+  .o-post-date--square__year {
+    position: absolute;
+    top: 1em;
+    right: -0.4em;
+    font-size: 0.6rem;
+            transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg); } }
+

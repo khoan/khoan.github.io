@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <title>An Hero - Kibana 4.1 on Heroku</title>
+
+    <link href="../../../../stylesheets/normalize.css" rel="stylesheet" /><link href="../../../../stylesheets/syntax.css" rel="stylesheet" /><link href="../../../../stylesheets/layout.css" rel="stylesheet" />
+
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+  </head>
+  <body class="">
+    <div id="main" role="main">
+      <header class="c-masthead">
+<a href="/">    <figure>
+      <img class="c-masthead__avatar" src="http://s.gravatar.com/avatar/6e0ed765699d27f1302adff76bc18b0e?s=80" alt="avatar">
+
+      <figcaption>
+        <h1 class="c-masthead__title">An hero</h1>
+        <span class="c-masthead__subtitle">coder by day, an hero by night</span>
+      </figcaption>
+    </figure>
+</a></header>
+ 
+
+        <article>
+    
+<article class="o-article">
+  <div class="o-post-date--square">
+    <div class="o-post-date--square__day">
+      27
+    </div>
+    <div class="o-post-date--square__month">
+      Jun
+    </div>
+    <div class="o-post-date--square__year">
+      2015
+    </div>
+  </div>
+
+  <h2><a href="./" class="o-article__link">Kibana 4.1 on Heroku</a></h2>
+    <p>At <a href="http://issueapp.com">Issue</a>, we handle lots of data. When you have millions of data points, patterns emerge and valuable info can be gleaned and harnessed from your data.</p>
+
+<p>We like ELK stack and Heroku. But before Kibana 4, you had to setup a web server, say nginx, to serve Kibana on Heroku. There are numerous nginx buildpack in the wild: <a href="https://github.com/abhishekmunie/heroku-buildpack-nginx">abhishekmunie</a>, <a href="https://github.com/ryandotsmith/nginx-buildpack">ryandotsmith</a>, etc. But no buildpacks for kibana as far as I am aware of. And I was too lazy to get something together.</p>
+
+<p>Fast forward to Kibana 4, a node web server has been bundled together to serve Kibana app, and we needed to harness our data. So <a href="https://github.com/issueapp/heroku-buildpack-kibana">issue/heroku-buildpack-kibana</a> is borned. Only catch is Kibana 4 requires Elasticsearch 1.4.4 or later. So if you're on Elasticsearch 1.4.4 or above, give the buildpack a go and put your data to work.</p>
+
+<p>Now onto building that Star Tram of my dream.</p>
+
+</article>
+
+  </article>
+
+    </div>
+
+    <script>
+window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+</script>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46083412-3', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  </body>
+</html>

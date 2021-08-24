@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <title>An Hero - Devise Authentication unscoped</title>
+
+    <link href="../../../../stylesheets/normalize.css" rel="stylesheet" /><link href="../../../../stylesheets/syntax.css" rel="stylesheet" /><link href="../../../../stylesheets/layout.css" rel="stylesheet" />
+
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+  </head>
+  <body class="">
+    <div id="main" role="main">
+      <header class="c-masthead">
+<a href="/">    <figure>
+      <img class="c-masthead__avatar" src="http://s.gravatar.com/avatar/6e0ed765699d27f1302adff76bc18b0e?s=80" alt="avatar">
+
+      <figcaption>
+        <h1 class="c-masthead__title">An hero</h1>
+        <span class="c-masthead__subtitle">coder by day, an hero by night</span>
+      </figcaption>
+    </figure>
+</a></header>
+ 
+
+        <article>
+    
+<article class="o-article">
+  <div class="o-post-date--square">
+    <div class="o-post-date--square__day">
+      19
+    </div>
+    <div class="o-post-date--square__month">
+      Jul
+    </div>
+    <div class="o-post-date--square__year">
+      2012
+    </div>
+  </div>
+
+  <h2><a href="./" class="o-article__link">Devise Authentication unscoped</a></h2>
+    
+<p>At Shop2 we do the Rails 3.2, Mongoid 2.4, and Devise 2.0. We found that Devise by default does not play nice with default scoping.</p>
+
+<div class="highlight"><pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre><span class="c1"># Our User model with default_scope of active users,</span>
+<span class="c1"># and a :vip scope</span>
+<span class="c1">#</span>
+<span class="k">class</span> <span class="nc">User</span>
+  <span class="kp">include</span> <span class="no">Mongoid</span><span class="o">::</span><span class="no">Document</span>
+
+  <span class="n">field</span> <span class="ss">:status</span>
+
+  <span class="c1"># now only active users can be authenticated</span>
+  <span class="n">default_scope</span> <span class="n">where</span><span class="p">(</span><span class="ss">status: </span><span class="s1">'active'</span><span class="p">)</span>
+
+  <span class="n">scope</span> <span class="ss">:vip</span><span class="p">,</span> <span class="n">where</span><span class="p">(</span><span class="ss">status: </span><span class="s1">'vip'</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></td></tr></tbody></table></code></pre></div>
+<p>So how would we authenticate VIPs?</p>
+
+<p>Devise uses Warden::Strategies to authenticate, and loads back user from a session. This is how I plugged into Devise:</p>
+
+<div class="highlight"><pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+</pre></td><td class="rouge-code"><pre><span class="c1"># lib/vip_authenticatable.rb</span>
+<span class="c1">#</span>
+<span class="c1"># We introduce :vip_authenticatable strategy to Warden.</span>
+<span class="c1"># With this strategy your login form might look something like</span>
+<span class="c1">#</span>
+<span class="c1"># &lt;form action="/path/to/create/session"&gt;</span>
+<span class="c1">#   &lt;input name="vip[:id]" placeholder="Enter your VIP No."&gt;</span>
+<span class="c1">#   &lt;input type="submit"&gt;</span>
+<span class="c1"># &lt;/form&gt;</span>
+<span class="c1">#</span>
+<span class="no">Warden</span><span class="o">::</span><span class="no">Strategies</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="ss">:vip_authenticatable</span><span class="p">)</span> <span class="k">do</span>
+  <span class="k">def</span> <span class="nf">valid?</span>
+    <span class="n">params</span><span class="p">[</span><span class="ss">:vip</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="n">params</span><span class="p">[</span><span class="ss">:vip</span><span class="p">][</span><span class="ss">:id</span><span class="p">]</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">authenticate!</span>
+    <span class="n">vip</span> <span class="o">=</span> <span class="no">User</span><span class="p">.</span><span class="nf">vip</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="ss">:vip</span><span class="p">][</span><span class="ss">:id</span><span class="p">])</span>
+
+    <span class="k">if</span> <span class="n">vip</span>
+      <span class="n">success!</span> <span class="n">vip</span>
+    <span class="k">elsif</span> <span class="o">!</span><span class="n">halted?</span>
+      <span class="nb">fail</span><span class="o">!</span> <span class="ss">:invalid</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c1"># config/initializers/devise.rb</span>
+<span class="c1">#</span>
+<span class="c1"># We now ask Warden to use :vip_authenticatable when authenticating.</span>
+<span class="c1">#</span>
+<span class="c1"># Also, we instruct Warden to load User from session without any default scoping.</span>
+<span class="c1">#</span>
+<span class="no">Devise</span><span class="p">.</span><span class="nf">setup</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+  <span class="n">config</span><span class="p">.</span><span class="nf">warden</span> <span class="k">do</span> <span class="o">|</span><span class="n">manager</span><span class="o">|</span>
+    <span class="nb">require</span> <span class="no">Rails</span><span class="p">.</span><span class="nf">root</span><span class="o">+</span><span class="s1">'lib/vip_authenticable'</span>
+    <span class="n">manager</span>
+      <span class="p">.</span><span class="nf">default_strategies</span><span class="p">(</span><span class="ss">scope: :user</span><span class="p">)</span>
+        <span class="p">.</span><span class="nf">unshift</span><span class="p">(</span><span class="ss">:vip_authenticatable</span><span class="p">)</span>
+
+    <span class="n">manager</span><span class="p">.</span><span class="nf">serialize_from_session</span> <span class="k">do</span> <span class="o">|</span><span class="n">keys</span><span class="o">|</span>
+      <span class="n">klass</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span> <span class="o">=</span> <span class="n">keys</span>
+      <span class="n">user</span> <span class="o">=</span> <span class="no">ActiveSupport</span><span class="o">::</span><span class="no">Inflector</span>
+        <span class="p">.</span><span class="nf">constantize</span><span class="p">(</span><span class="n">klass</span><span class="p">).</span><span class="nf">unscoped</span>
+          <span class="p">.</span><span class="nf">serialize_from_session</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></td></tr></tbody></table></code></pre></div>
+<p>And there you have it folks: VIP login.</p>
+
+</article>
+
+  </article>
+
+    </div>
+
+    <script>
+window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+</script>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46083412-3', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  </body>
+</html>
