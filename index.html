@@ -30,6 +30,58 @@
 <article class="o-article">
   <div class="o-post-date--square">
     <div class="o-post-date--square__day">
+       3
+    </div>
+    <div class="o-post-date--square__month">
+      Jan
+    </div>
+    <div class="o-post-date--square__year">
+      2023
+    </div>
+  </div>
+
+  <h2><a href="2023/01/03/gotcha-ruby-operator/" class="o-article__link">gotcha: ruby []=</a></h2>
+    <p>Another <a href="https://www.destroyallsoftware.com/talks/wat">wat</a> moment with:</p>
+
+<div class="highlight"><pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td>
+<td class="rouge-code"><pre><span class="k">class</span> <span class="nc">Bam</span>
+  <span class="k">def</span> <span class="nf">[]=</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+    <span class="s2">"bam"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>
+<div class="highlight"><pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre><span class="n">irb</span><span class="o">&gt;</span> <span class="c1"># I'm expecting "bam" to be the return value</span>
+<span class="n">irb</span><span class="o">&gt;</span> <span class="no">Bam</span><span class="p">.</span><span class="nf">new</span><span class="p">[</span><span class="ss">:ham</span><span class="p">]</span> <span class="o">=</span> <span class="ss">:bacon</span>
+<span class="c1"># =&gt; :bacon</span>
+</pre></td>
+</tr></tbody></table></code></pre></div>
+<div class="highlight"><pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr>
+<td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td>
+<td class="rouge-code"><pre><span class="n">irb</span><span class="o">&gt;</span> <span class="c1"># But this works as expected</span>
+<span class="n">irb</span><span class="o">&gt;</span> <span class="no">Bam</span><span class="p">.</span><span class="nf">new</span><span class="p">.</span><span class="nf">public_send</span></pre></td>
+</tr></tbody></table></code></pre></div>
+    <a href="2023/01/03/gotcha-ruby-operator/">read more...</a>
+</article>
+
+  
+<article class="o-article">
+  <div class="o-post-date--square">
+    <div class="o-post-date--square__day">
       24
     </div>
     <div class="o-post-date--square__month">
@@ -256,27 +308,6 @@ The Treasury...</pre></td>
   <h2><a href="2016/11/11/ruby-ftp-stream/" class="o-article__link">Ruby FTP stream</a></h2>
     <p>Good ol' FTP that's how the web's done once. Naturally Ruby has an FTP stdlib. But if I download 15MB then my Ruby process memory increased by 15MB and NEVER come back down. Poof, my 15MB went into the ether. And if you have a long running process...</p>
     <a href="2016/11/11/ruby-ftp-stream/">read more...</a>
-</article>
-
-  
-<article class="o-article">
-  <div class="o-post-date--square">
-    <div class="o-post-date--square__day">
-      24
-    </div>
-    <div class="o-post-date--square__month">
-      Aug
-    </div>
-    <div class="o-post-date--square__year">
-      2016
-    </div>
-  </div>
-
-  <h2><a href="2016/08/24/tembed-a-ruby-c-extension/" class="o-article__link">Meet Tembed a Ruby C extension</a></h2>
-    <p>Alright, so you're testing fancy fonts in the lovely browsers, then bam IE keeps spewing <em>installable embedding not allowed</em> and fonts are broken. But the Google God points to <a href="https://www.andrebacklund.com/fontfixer.html">Andre Backlund fontfixer</a>.</p>
-
-<p>Hallelujah! One font fixed, only a few more to...</p>
-    <a href="2016/08/24/tembed-a-ruby-c-extension/">read more...</a>
 </article>
 
 
