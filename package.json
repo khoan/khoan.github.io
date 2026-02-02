@@ -1,0 +1,26 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Source code of http://khoan.github.io/",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "dev": "astro dev --host 0.0.0.0",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khoan/khoan.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khoan/khoan.github.io/issues"
+  },
+  "homepage": "https://github.com/khoan/khoan.github.io#readme",
+  "dependencies": {
+    "astro": "^5.17.1"
+  }
+}

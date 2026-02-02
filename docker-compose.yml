@@ -1,0 +1,10 @@
+version: '2.0'
+services:
+  dev:
+    image: "node:22-alpine"
+    ports:
+      - 4321:4321
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: npm run dev
