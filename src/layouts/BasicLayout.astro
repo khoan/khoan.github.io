@@ -2,6 +2,8 @@
 import '../styles/normalize.css';
 import '../styles/site.css';
 
+import MastHead from '../components/MastHead.astro';
+
 const { pageTitle } = Astro.props;
 ---
 <!doctype html>
@@ -13,6 +15,7 @@ const { pageTitle } = Astro.props;
   </head>
   <body>
     <div id="main" role="main">
+      <MastHead />
       <slot />
     </div>
   </body>
