@@ -1,8 +1,17 @@
 ---
+import { Markdown } from 'astro-remote';
 import BasicLayout from '../layouts/BasicLayout.astro';
+import PostLayout from '../layouts/PostLayout.astro';
 
 const pageTitle = "An Hero";
+const allPosts = Object.values(import.meta.glob('./**/*.md', { eager: true }));
 ---
 <BasicLayout pageTitle={pageTitle}>
-  <h1>Hello, World!</h1>
+  {allPosts.map(async (post, index) => {
+    const teaser = post.rawContent().trim().substring(0, 100);
+
+    return <PostLayout frontmatter={post.frontmatter}>
+      <Markdown content={teaser} />
+    </PostLayout>
+  })}
 </BasicLayout>

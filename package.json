@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Source code of http://khoan.github.io/",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "dev": "astro dev --host 0.0.0.0",
     "build": "astro build",
@@ -21,6 +20,7 @@
   },
   "homepage": "https://github.com/khoan/khoan.github.io#readme",
   "dependencies": {
-    "astro": "^5.17.1"
+    "astro": "^5.17.1",
+    "astro-remote": "^0.3.4"
   }
 }
