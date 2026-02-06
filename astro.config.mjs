@@ -1,3 +1,9 @@
 import { defineConfig } from "astro/config";
 
-export default defineConfig({});
+export default defineConfig({
+  markdown: {
+    shikiConfig: {
+      theme: 'night-owl-light'
+    }
+  }
+});
