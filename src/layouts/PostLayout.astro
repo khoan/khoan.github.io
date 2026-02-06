@@ -1,48 +1,13 @@
 ---
 import BasicLayout from './BasicLayout.astro';
+import Post from '../components/Post.astro';
 
-const { frontmatter } = Astro.props;
-
-const title = frontmatter.title;
-
-const publishDate = new Date(frontmatter.publishDate);
-const publishDay = publishDate.getUTCDate();
-const publishMonth = {
-  0: 'Jan',
-  1: 'Feb',
-  2: 'Mar',
-  3: 'Apr',
-  4: 'May',
-  5: 'Jun',
-  6: 'Jul',
-  7: 'Aug',
-  8: 'Sep',
-  9: 'Oct',
-  10: 'Nov',
-  11: 'Dec'
-}[publishDate.getUTCMonth()];
-const publishYear = publishDate.getUTCFullYear();
+const postMarkdown = Astro.self;
+const { frontmatter, url } = Astro.props;
+const { title, publishDate } = frontmatter;
 ---
 <BasicLayout pageTitle={title}>
-  <article class="o-article">
-    <div class="o-post-date--square">
-      <div class="o-post-date--square__day">
-        {publishDay}
-      </div>
-      <div class="o-post-date--square__month">
-        {publishMonth}
-      </div>
-      <div class="o-post-date--square__year">
-        {publishYear}
-      </div>
-    </div>
-
-    <h2>
-      <a href="/2012/06/28/claim-back-snow-leopard-speed-from-lion" class="o-article__link">
-        {title}
-      </a>
-    </h2>
-
+  <Post url={url} title={title} publishDate={publishDate}>
     <slot />
-  </article>
+  </Post>
 </BasicLayout>

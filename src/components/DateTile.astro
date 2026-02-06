@@ -1,0 +1,32 @@
+---
+let { date } = Astro.props;
+
+date = new Date(date);
+const day = date.getUTCDate();
+const month = {
+  0: 'Jan',
+  1: 'Feb',
+  2: 'Mar',
+  3: 'Apr',
+  4: 'May',
+  5: 'Jun',
+  6: 'Jul',
+  7: 'Aug',
+  8: 'Sep',
+  9: 'Oct',
+  10: 'Nov',
+  11: 'Dec'
+}[date.getUTCMonth()];
+const year = date.getUTCFullYear();
+---
+<div class="o-post-date--square">
+  <div class="o-post-date--square__day">
+    {day}
+  </div>
+  <div class="o-post-date--square__month">
+    {month}
+  </div>
+  <div class="o-post-date--square__year">
+    {year}
+  </div>
+</div>

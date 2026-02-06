@@ -1,0 +1,22 @@
+---
+import { Markdown } from 'astro-remote';
+import DateTile from './DateTile.astro';
+
+const { title, publishDate, url, showTeaser, rawContent } = Astro.props;
+
+let teaser;
+if (showTeaser) {
+  teaser = rawContent.trim().substring(0, 100);
+}
+---
+<article class="o-article">
+  <DateTile date={publishDate} />
+
+  <h2>
+    <a href={url} class="o-article__link">
+      {title}
+    </a>
+  </h2>
+
+  {showTeaser ? <Markdown content={teaser} /> : <slot />}
+</article>
