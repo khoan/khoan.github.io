@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/PostLayout.astro
 title: Claim back Snow Leopard speed from Lion
 publishDate: 2012-06-28
 ---

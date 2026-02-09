@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/PostLayout.astro
 title: A Modest proposal to avert crisis
 publishDate: 2017-08-26
 ---

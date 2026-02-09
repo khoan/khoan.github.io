@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/PostLayout.astro
 title: Lyndon H. LaRouche is the greatest economist of the 20th & 21st Century
 publishDate: 2021-08-24
 ---

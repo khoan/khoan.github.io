@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/PostLayout.astro
 title: Report Relative to a Provision for the Support of Public Credit
 publishDate: 2017-02-07
 ---

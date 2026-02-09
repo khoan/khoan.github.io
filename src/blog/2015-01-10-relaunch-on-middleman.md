@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/PostLayout.astro
 title: Relaunch on middleman
 publishDate: 2015-01-10
 ---

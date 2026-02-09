@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/PostLayout.astro
 title: The mindset of a coder and his three plateaus
 publishDate: 2020-08-02
 ---

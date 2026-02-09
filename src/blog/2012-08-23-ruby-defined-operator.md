@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/PostLayout.astro
 title: ruby defined? operator
 publishDate: 2012-08-23
 ---

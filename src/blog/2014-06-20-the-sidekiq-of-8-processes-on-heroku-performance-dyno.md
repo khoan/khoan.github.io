@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/PostLayout.astro
 title: The Sidekiq of 8 processes on Heroku Performance Dyno
 publishDate: 2014-06-20
 ---

@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/PostLayout.astro
 title: Opal Runner
 publishDate: 2015-03-28
 ---

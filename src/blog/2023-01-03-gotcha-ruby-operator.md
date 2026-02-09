@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/PostLayout.astro
 title: "gotcha: ruby []="
 publishDate: 2023-01-03
 ---

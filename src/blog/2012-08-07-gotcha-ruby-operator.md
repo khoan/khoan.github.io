@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/PostLayout.astro
 title: "gotcha: ruby += operator"
 publishDate: 2012-08-07
 ---

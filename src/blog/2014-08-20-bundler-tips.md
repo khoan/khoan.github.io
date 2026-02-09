@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/PostLayout.astro
 title: Bundler tips
 publishDate: 2014-08-20
 ---

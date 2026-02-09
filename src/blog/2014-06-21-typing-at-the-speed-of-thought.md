@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/PostLayout.astro
 title: typing at the speed of thought
 publishDate: 2014-06-21
 ---

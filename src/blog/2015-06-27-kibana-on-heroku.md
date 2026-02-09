@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/PostLayout.astro
 title: Kibana 4.1 on Heroku
 publishDate: 2015-06-27
 ---

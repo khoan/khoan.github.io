@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/PostLayout.astro
 title: Rename file extension on command line interface
 publishDate: 2015-01-19
 ---

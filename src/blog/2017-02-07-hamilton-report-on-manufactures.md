@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/PostLayout.astro
 title: Report on the Subject of Manufactures
 publishDate: 2017-02-07
 ---

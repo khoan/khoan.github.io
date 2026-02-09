@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/PostLayout.astro
 title: Financial System Inquiry
 publishDate: 2014-08-14
 ---

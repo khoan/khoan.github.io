@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/PostLayout.astro
 title: Meet Tembed a Ruby C extension
 publishDate: 2016-08-24
 ---

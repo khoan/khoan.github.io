@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/PostLayout.astro
 title: Report on the Establishment of a Mint
 publishDate: 2017-02-07
 ---

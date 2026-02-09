@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/PostLayout.astro
 title: Life giving Beauty
 publishDate: 2017-03-10
 ---

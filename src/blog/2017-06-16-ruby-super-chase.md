@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/PostLayout.astro
 title: Chasing after super in your favorite Ruby lib
 publishDate: 2017-06-16
 ---

@@ -1,18 +1,20 @@
 ---
+import { getCollection } from 'astro:content';
 import BasicLayout from '../layouts/BasicLayout.astro';
 import Post from '../components/Post.astro';
 
 const pageTitle = "An Hero";
-const allPosts = Object.values(import.meta.glob('./**/*.md', { eager: true })).reverse();
+const allPosts = await getCollection('blog');
+const descendingPosts = allPosts.sort(((a,b) => a.id < b.id ? 1 : b.id < a.id ? -1 : 0));
 ---
 <BasicLayout pageTitle={pageTitle}>
-  {allPosts.map(async post =>
+  {descendingPosts.map(async post =>
     <Post
-      title={post.frontmatter.title}
-      publishDate={post.frontmatter.publishDate}
-      url={post.url}
+      title={post.data.title}
+      publishDate={post.data.publishDate}
+      url={post.id}
       showTeaser={true}
-      rawContent={post.rawContent()}
+      rawContent={post.body}
     />
   )}
 </BasicLayout>

@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/PostLayout.astro
 title: IRC#ruby-lang
 publishDate: 2012-08-22
 ---

@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/PostLayout.astro
 title: nginx pow coexistence
 publishDate: 2014-07-09
 ---

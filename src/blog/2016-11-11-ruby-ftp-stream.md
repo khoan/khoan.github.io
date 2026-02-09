@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/PostLayout.astro
 title: Ruby FTP stream
 publishDate: 2016-11-11
 ---

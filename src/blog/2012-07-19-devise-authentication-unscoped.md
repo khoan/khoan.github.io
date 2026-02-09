@@ -1,5 +1,4 @@
 ---
-layout: ../layouts/PostLayout.astro
 title: Devise Authentication unscoped
 publishDate: 2012-07-19
 ---
